@@ -1,17 +1,13 @@
-<snippet>
-  <content><![CDATA[
-# ${1:ProtectTerminateServersAWS}
+# ProtectTerminateServersAWS
 Habilita la protección ante "Terminate" en los servidores de las diferentes regiones de una cuenta AWS
 ## Instalación
 Solo se debe ejecutar con python
 ## Uso
 Proteger servidores Amazon ante un equivocación
-## Credits
-Roberto Carlos Reyes Fernández
 ## Detalles
 Lista todas las regiones
 
- regiones = ["us-east-1","us-west-1","us-west-2","ap-northeast-1","ap-southeast-1","ap-southeast-2","eu-central-1","eu-west-1","sa-east-1"]
+ `regiones = ["us-east-1","us-west-1","us-west-2","ap-northeast-1","ap-southeast-1","ap-southeast-2","eu-central-1","eu-west-1","sa-east-1"]`
 
 Se conecta a AWS
 
@@ -45,11 +41,8 @@ Esta comparación solamente es para mostrar el resultado de forma ordenada
 La modificación del valor de protección se realiza con este comando
 
  inst.modify_attribute('disableApiTermination', True)	
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
-
-# 
+## Creditos
+Roberto Carlos Reyes Fernández
 
 
 
