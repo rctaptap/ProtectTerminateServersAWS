@@ -3,7 +3,7 @@ Habilita la protección ante "Terminate" en los servidores de las diferentes regi
 ## Instalación
 Solo se debe ejecutar con python
 ## Uso
-Proteger servidores Amazon ante un equivocación
+Proteger servidores Amazon ante un terminado accidental
 ## Detalles
 Lista todas las regiones
 
