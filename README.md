@@ -11,36 +11,36 @@ Lista todas las regiones
 
 Se conecta a AWS
 
- for region in regiones:
-	conn=boto.ec2.connect_to_region(region)	
+ `for region in regiones:
+	conn=boto.ec2.connect_to_region(region)`
 
 Obtiene todas los servidores en base al ID Reservado
 
- reservations = conn.get_all_instances()
+ `reservations = conn.get_all_instances()`
 	
 Para cada uno de ellos listaremos en base al ID de la instancia	
 
- for res in reservations:		
-	for inst in res.instances:
+ `for res in reservations:		
+	for inst in res.instances:`
 	
 Es posible obtener el valor del atributo Termination Protection
 
- atri = conn.get_instance_attribute(inst.id,'disableApiTermination')
+ `atri = conn.get_instance_attribute(inst.id,'disableApiTermination')`
 
 Evaluamos si es falso
 
- if str(atri) == "{u'disableApiTermination': False}":	
+ `if str(atri) == "{u'disableApiTermination': False}":`	
 
 Esta comparación solamente es para mostrar el resultado de forma ordenada
 
- if 'Name' in inst.tags:           	     
+ `if 'Name' in inst.tags:           	     
 	print "%s (%s) [%s] [%s]" % (inst.tags['Name'], inst.id, atri, inst.region)
  else:
-	print "%s [%s] [%s]" % (inst.id, inst.state, atri, inst.region)		
+	print "%s [%s] [%s]" % (inst.id, inst.state, atri, inst.region)`		
 
 La modificación del valor de protección se realiza con este comando
 
- inst.modify_attribute('disableApiTermination', True)	
+ `inst.modify_attribute('disableApiTermination', True)	`
 ## Creditos
 Roberto Carlos Reyes Fernández
 
