@@ -11,8 +11,10 @@ Lista todas las regiones
 
 Se conecta a AWS
 
- ```for region in regiones: 
-	conn=boto.ec2.connect_to_region(region)```
+```
+ for region in regiones: 
+	conn=boto.ec2.connect_to_region(region)
+```
 
 Obtiene todas los servidores en base al ID Reservado
 
