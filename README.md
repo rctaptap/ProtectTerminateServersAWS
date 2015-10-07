@@ -11,9 +11,8 @@ Lista todas las regiones
 
 Se conecta a AWS
 
- `for region in regiones:
- 
-	conn=boto.ec2.connect_to_region(region)`
+ `for region in regiones:` 
+	`conn=boto.ec2.connect_to_region(region)`
 
 Obtiene todas los servidores en base al ID Reservado
 
@@ -21,9 +20,8 @@ Obtiene todas los servidores en base al ID Reservado
 	
 Para cada uno de ellos listaremos en base al ID de la instancia	
 
- `for res in reservations:		
- 
-	for inst in res.instances:`
+ `for res in reservations:` 
+	`for inst in res.instances:`
 	
 Es posible obtener el valor del atributo Termination Protection
 
@@ -35,13 +33,10 @@ Evaluamos si es falso
 
 Esta comparación solamente es para mostrar el resultado de forma ordenada
 
- `if 'Name' in inst.tags:           	     
- 
-	print "%s (%s) [%s] [%s]" % (inst.tags['Name'], inst.id, atri, inst.region)
-	
- else:
- 
-	print "%s [%s] [%s]" % (inst.id, inst.state, atri, inst.region)`		
+ `if 'Name' in inst.tags: `
+	`print "%s (%s) [%s] [%s]" % (inst.tags['Name'], inst.id, atri, inst.region)`
+   `else:` 
+	`print "%s [%s] [%s]" % (inst.id, inst.state, atri, inst.region)`
 
 La modificación del valor de protección se realiza con este comando
 
