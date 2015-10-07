@@ -1,6 +1,8 @@
 # ProtectTerminateServersAWS
 Habilita la protección ante "Terminate" en los servidores de las diferentes regiones de una cuenta AWS
-## Instalación
+## Instalación y requisitos
+Se debe tener instalado el [SDK Boto AWS](https://aws.amazon.com/sdk-for-python/)
+Los detalles de su configuración se pueden encontrar en github [github](https://github.com/boto/boto3)
 Solo se debe ejecutar con python
 ## Uso
 Proteger servidores Amazon ante un terminado accidental
