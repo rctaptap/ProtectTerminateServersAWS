@@ -10,7 +10,7 @@ for region in regiones:
 	for res in reservations:		
 		for inst in res.instances:
 			atri = conn.get_instance_attribute(inst.id,'disableApiTermination')
-			if str(atri) == "{u'disableApiTermination': True}":	
+			if str(atri) == "{u'disableApiTermination': False}":	
 				if 'Name' in inst.tags:           	     
 					print "%s (%s) [%s] [%s]" % (inst.tags['Name'], inst.id, atri, inst.region)
 				else:
